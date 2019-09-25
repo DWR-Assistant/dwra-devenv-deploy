@@ -9,7 +9,7 @@ IMAGE_VERSION=${BASE_IMAGE//*:}
 imageFlag=$(docker images | grep ${IMAGE_NAME} | grep ${IMAGE_VERSION} | wc -l)
 
 if [ "${imageFlag}" == "0" ]; then
-  ./prepare.sh
+  ./build.sh
 fi
 
 docker-compose stop

@@ -4,3 +4,5 @@ export SRC_PATH=${CURRENT_PATH}/src/${PROJECT_NAME}
 
 export BASE_IMAGE=dwra-python-dev:1.0
 
+export PORT=9880
+

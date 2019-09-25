@@ -3,12 +3,13 @@ version: '3'
 services:
   python-dev:
     image: ${BASE_IMAGE}
+    ports:
+      - ${PORT}:8000 
     volumes:
       - ${SRC_PATH}:/usr/src
     environment:
       TZ: Asia/Shanghai
     working_dir: /usr/src
-#    command: python /opt/watch.py index.py
     logging:
       options:
         max-size: 10mb
