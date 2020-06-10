@@ -1,4 +1,4 @@
-version: '3'
+version: '3.2'
 
 services:
   python-dev:
@@ -8,7 +8,11 @@ services:
     volumes:
       - ${SRC_PATH}:/usr/src
     environment:
-      TZ: Asia/Shanghai
+      - TZ=Asia/Shanghai
+      - WXAPP_ID=wx7ac2a93aa6b144ca
+      - WXAPP_SECRET=14e4608775691f677cad0123458445ef
+      - REDIS_HOST=172.17.137.5
+      - REDIS_PASSWORD=cpic!1015
     working_dir: /usr/src
     logging:
       options:
